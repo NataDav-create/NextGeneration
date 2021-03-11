@@ -1,0 +1,64 @@
+.contact-page {
+  background-color: #fff;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-text {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 300;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-descr {
+    display: block;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+}
+
+.map-wrapper {
+  background: url('../images/map.png') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 308px;
+  cursor: pointer;
+
+  .map {
+    height: 308px;
+    overflow: hidden;
+  }
+}
+
+.map-wrapper.map-wrapper-ru {
+  background: url('../images/map.ru.png') no-repeat center;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.contacts__lang {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}

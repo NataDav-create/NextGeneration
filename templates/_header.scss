@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+  background-color: #000;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.menu__logo {
+  a {
+    color: #fff;
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+}
+
+.header-btn {
+  display: flex;
+  width: 40px;
+  height: 25px;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  cursor: pointer;
+
+  div {
+    width: 40px;
+    height: 2px;
+    background-color: #Ffffff;
+    margin: 3px 0;
+  }
+}
+
+.menu__contacts {
+  a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+  }
+}

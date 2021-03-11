@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>thanks</title>
+  <link rel="shortcut icon" href="images/english-language.png" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header header-thanks">
+    <div class="header__top header__top-thanks">
+      <div class="container">
+      <div class="header__top-wrapper">
+          <div class="logo">
+              <a href="index.html" class="logo__link">
+                  <img src="images/Logo.svg" alt="">
+              </a>
+          </div>
+          <div class="phones">
+              <a href="tel:+74952553020" class="phone__link phone__link--phone">+7 (495) 255-30-20</a>
+              <div class="phones__message">
+                  <a href="tel:+79153599519" class="phone__link phone__link--watsapp">+7 (915) 359-95-19</a>
+                  <span>(Только для сообщений)</span>
+              </div>
+          </div>
+          <div class="phones-mobile">
+              <a href="tel:+74952553020" class="phones__link phones-mobile__link--phone">
+                  <img src="images/Phone-mobile.svg" alt="phone mobile">
+              </a>
+    
+                      <a href="tel:+79153599519" class="phones__link phones-mobile__link--watsapp">
+                          <img src="images/whatsapp-mobile.svg" alt="whatsapp mobile">
+                      </a>
+          </div>
+      </div>
+      
+  </div><!--container finished-->
+</div>
+<h2 class="header-thanks__title">
+  Вы успешно
+зарегистрировались на вебинар!
+</h2>
+
+  </header>
+  <section class="questions">
+    <div class="container">
+      <h2 class="questions__title">Анкета участника вебинара:</h2>
+      <p class="questions__subtitle">Заполните анкету. Она позволит нам понять, какие участники будут на вебинаре и о чём нужно говорить в первую очередь. Анкета анонимная. Давайте, пожалуйста, правдивые ответы. Так мы сделаем вебинар максимально полезным именно для Вас.</p>
+      <span class="questions__span">Это займет меньше 1 (одной) минуты!</span>
+      <form class="thanks__form form" action="mail.php">
+        	<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Dialog">
+		<input type="hidden" name="admin_email" value="nata.web.des@gmail.com">
+		<input type="hidden" name="form_subject" value="Form Subject">
+        <div class="input-group thanks__input-group thanks__input-group--name">
+          <label for="thanksName" class="label thanks__label">1. Ваше имя</label>
+        <input type="text" name="thanksName" class="input form__input thanks__input" id="thanksName" placeholder="Имя" autofocus>
+        </div>
+        <div class="input-group thanks__input-group">
+          <label class="label thanks__label">2. Сколько вам лет?</label>
+          <input class="radio radio--first" id="input10" name="input1" type="radio" value="меньше 18 лет">
+          <label class="thanks__radio thanks__radio--first" for="input10">меньше 18 лет</label>
+          <input class="radio" id="input11" name="input1" type="radio" value="18 - 25 лет">
+          <label class="thanks__radio" for="input11">18 - 25 лет</label>
+          <input class="radio" id="input12" name="input1" type="radio" value="26 - 45 лет">
+          <label class="thanks__radio" for="input12">26 - 45 лет</label>
+          <input class="radio" id="input13" name="input1" type="radio" value="45 - 60 лет">
+          <label class="thanks__radio" for="input13">45 - 60 лет</label>
+          <input class="radio" id="input14" name="input1" type="radio" value="60+ лет">
+          <label class="thanks__radio" for="input14">60+ лет</label>
+        </div>
+        <div class="input-group thanks__input-group">
+          <label for="thanksArea" class="label thanks__label">3. Какая у вас цель занятий?</label>
+          <textarea id="thanksArea" class="thanks__area" name="thanksArea" placeholder="Опишите своими словами"></textarea>
+        </div>
+
+        <div class="input-group thanks__input-group">
+          <label class="label thanks__label">4. Какой у вас уровень владения английским?</label>
+          <input class="radio" id="input5" name="input" type="radio" value="что-то знаю">
+          <label class="thanks__radio thanks__radio--first" for="input5">что-то знаю</label>
+          <input class="radio" id="input1" name="input" type="radio" value="нулевой (вообще ничего не знаю)">
+          <label class="thanks__radio" for="input1">нулевой (вообще ничего не знаю)</label>
+          <input class="radio" id="input6" name="input" type="radio" value="начальный">
+          <label class="thanks__radio" for="input6">начальный</label>
+          <input class="radio" id="input7" name="input" type="radio" value="базовый (А2)">
+          <label class="thanks__radio" for="input7">базовый (А2)</label>
+          <input class="radio" id="input8" name="input" type="radio" value="средний (В1-В2)">
+          <label class="thanks__radio" for="input8">средний (В1-В2)</label>
+          <input class="radio" id="input9" name="input" type="radio" value="продвинутый (С1)">
+          <label class="thanks__radio" for="input9">продвинутый (С1)</label>
+        </div>
+
+        <div class="input-group thanks__input-group">
+          <label class="label thanks__label">5. Как быстро вы хотите прокачать английский для вашей цели?</label>
+          
+          <input class="radio" id="input2" name="input2" type="radio" value="2-3 месяца">
+          <label class="thanks__radio thanks__radio--first" for="input2">2-3 месяца</label>
+          <input class="radio" id="input3" name="input2" type="radio" value="3-6 месяцев">
+          <label class="thanks__radio" for="input3">3-6 месяцев</label>
+          <input class="radio" id="input4" name="input2" type="radio" value="6-12 месяцев">
+          <label class="thanks__radio" for="input4">6-12 месяцев</label>
+        </div>
+        <button class="btn thanks__btn">
+          Заполнить анкету
+      </button>
+
+      </form>
+      
+
+    </div>
+  </section>
+  <div class="vk">
+    <div class="vk__modal">
+      <button class="vk__close"></button>
+      <h3 class="vk__title">Спасибо за заполненную анкету
+      </h3>
+      <p class="thanks__text">Наш менеджер свяжеться с Вами в ближайшее время.
+        <a class="thanks__link" href="index.html">Обратно на главную</a></p>
+    </div><!--content finished-->
+    </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

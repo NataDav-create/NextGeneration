@@ -1,0 +1,83 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.row {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-50 {
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+
+  &__link {
+    transition: all 0.4s;
+
+    &:hover {
+      transition: all 0.5s;
+
+      .wrapper__content {
+        transition: all 0.4s;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.wrapper__content {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &-box {
+    max-width: 200px;
+    text-align: center;
+
+    &--left {
+      margin-right: 150px;
+      max-width: 220px;
+      margin-left: auto;
+
+    }
+
+    &--right {
+      margin-left: 150px;
+
+    }
+  }
+}
+
+.wrapper__content-1 {
+  background-image: url("../images/bg-girl12.jpg");
+  padding-top: 300px;
+  text-align: right;
+}
+
+.wrapper__content-2 {
+  background-image: url("../images/man7.jpg");
+  padding-top: 300px;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #fff;
+
+  // &--left {
+  //   margin-right: 50px;
+  // }
+
+  // &--right {
+  //   margin-left: 50px;
+  // }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/scissors.png" type="image/x-icon" />
+  <title>Next Generation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <div class="header-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="logo menu__logo">
+          <a href="index.ru.html"> New Generation </a>
+        </div>
+        <div class="menu__contacts">
+          <a href="tel:+79819119699" class="phone contacts__phone menu-contacts__phone">+7 925 410 0404</a>
+          <a class="contacts__lang" href="index.html">EN</a>
+        </div>
+      </div>
+      <nav class="mobile__menu">
+        <div class="mobile__close-btn"></div>
+        <div class="mobile-menu__list">
+          <ul class="mobile__list">
+            <li><a class="mobile__link" href="index.ru.html">Главная</a></li>
+            <li>
+              <a class="mobile__link" href="beauty.ru.html">Парикмахерская</a>
+            </li>
+            <li>
+              <a class="mobile__link" href="barbershop.ru.html">Барбершоп</a>
+            </li>
+            <li><a class="mobile__link" href="#contacts-ru">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--container finished-->
+  </header>
+  <section class="hero">
+    <div class="row row-hero">
+      <div class="col-50 col-50--lady">
+        <a class="col-50__link" href="beauty.ru.html">
+          <div class="wrapper__content wrapper__content-1">
+            <div class="wrapper__content-box wrapper__content-box--left">
+              <h2 class="hero__title hero__title--left">Hair Salon</h2>
+              <div class="btn hero__btn hero__btn--left">Перейти</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-50 col-50--man">
+        <a class="col-50__link" href="barbershop.ru.html">
+          <div class="wrapper__content wrapper__content-2">
+            <div class="wrapper__content-box wrapper__content-box--right">
+              <h2 class="hero__title hero__title--right">Барбершоп</h2>
+              <div class="btn hero__btn hero__btn--right">Перейти</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts-ru" class="page contact-page">
+    <div class="contacts__wrapper">
+      <p class="contacts__wrapper-text">
+        Парикмахерская и Барбершоп "New Generation", Москва
+      </p>
+      <h3 class="page-title page-title--ru contacts__wrapper-title">
+        Мы открыты<br />
+        каждый день
+      </h3>
+      <p class="contacts__wrapper-descr">10.00 - 21.00</p>
+      <p class="contacts__wrapper-descr">Ул.Донская, 12A</p>
+      <p class="contacts__wrapper-descr">Москва</p>
+      <p class="contacts__wrapper-descr">+7 925 410 0404</p>
+    </div>
+  </section>
+
+  <div class="map-wrapper map-wrapper-ru">
+    <div class="loader loader-default"></div>
+    <div class="map" id="map"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">© New Generation, 2020</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

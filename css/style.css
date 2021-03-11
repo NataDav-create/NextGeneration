@@ -1,0 +1,1327 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page {
+  padding: 100px 0;
+}
+
+.page-title {
+  font-size: 53px;
+  line-height: 75px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.page-title--ru {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  width: 140px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero__btn {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.hero__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.hero__btn:hover::before {
+  left: 100%;
+}
+
+.mobile__menu {
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 400px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 1000;
+}
+
+.mobile__menu .mobile__list {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+.mobile__menu .mobile__list .mobile__link {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.mobile__menu .mobile__list .mobile__link:hover {
+  color: #9a703e;
+  -webkit-box-shadow: inset 0px 16px 19px rgba(0, 0, 0, 0.17);
+          box-shadow: inset 0px 16px 19px rgba(0, 0, 0, 0.17);
+}
+
+.mobile__menu.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.container--menu {
+  position: relative;
+}
+
+.mobile__close-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  left: 15px;
+  top: 31px;
+  cursor: pointer;
+}
+
+.mobile__close-btn::after,
+.mobile__close-btn::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.mobile__close-btn::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mobile__close-btn::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 6px;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000;
+}
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__dialog {
+  position: relative;
+  max-width: 36.36rem;
+  padding: 2.357rem 3.5rem 1.92rem;
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 28px;
+  height: 28px;
+  background: transparent url("../images/close.svg");
+  border: none;
+  outline: none;
+  margin: 0.78rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal__title {
+  text-align: center;
+  color: #9a703e;
+  margin: 0;
+  margin-bottom: 2.428rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+  font-weight: normal;
+}
+
+.modal-btn {
+  background-color: #9a703e;
+  color: #fff;
+  border: none;
+}
+
+.input-group {
+  position: relative;
+}
+
+div.invalid {
+  padding-bottom: 0;
+  color: tomato;
+  position: absolute;
+  bottom: -18px;
+  border-bottom: none;
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.contacts__form-title {
+  margin-bottom: 50px;
+  font-size: 35px;
+  line-height: 28px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  /* font-family: 'RobotoCondensed-Regular'; */
+}
+
+.contacts__form-input {
+  display: block;
+  outline: none;
+  border: none;
+  border: 1px solid #9a703e;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 100%;
+  padding: 0 31px;
+  background-color: #fff;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 21px;
+  font-weight: 300;
+}
+
+.contacts__form-input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.contacts__form-input:-ms-input-placeholder {
+  color: #000;
+}
+
+.contacts__form-input::-ms-input-placeholder {
+  color: #000;
+}
+
+.contacts__form-input::placeholder {
+  color: #000;
+}
+
+.contacts__form-btn {
+  width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+  outline: none;
+  /* border: none; */
+  text-transform: uppercase;
+  background-color: #9a703e;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  padding: 11px 45px;
+  height: 60px;
+  font-weight: 300;
+}
+
+.success {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  z-index: 1000;
+}
+
+.success--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.success__modal {
+  position: relative;
+  max-width: 40rem;
+  padding: 2.357rem 3.5rem 1.928rem;
+  color: #fff;
+  background: #9a703e;
+  z-index: 900;
+}
+
+.success__title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.success__text {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.success__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  margin: 12px;
+  background: transparent url("../images/close.svg") no-repeat center/80%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.success:active {
+  outline: none;
+}
+
+.success:focus {
+  outline: none;
+}
+
+.thanks__text {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+a.thanks__link {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding-top: 30px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.thanks:hover {
+  color: #9a703e;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+  background-color: #000;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.menu__logo a {
+  color: #fff;
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.header-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header-btn div {
+  width: 40px;
+  height: 2px;
+  background-color: #Ffffff;
+  margin: 3px 0;
+}
+
+.menu__contacts a {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.row {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-50 {
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.col-50__link {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.col-50__link:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.col-50__link:hover .wrapper__content {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.wrapper__content {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper__content-box {
+  max-width: 200px;
+  text-align: center;
+}
+
+.wrapper__content-box--left {
+  margin-right: 150px;
+  max-width: 220px;
+  margin-left: auto;
+}
+
+.wrapper__content-box--right {
+  margin-left: 150px;
+}
+
+.wrapper__content-1 {
+  background-image: url("../images/bg-girl12.jpg");
+  padding-top: 300px;
+  text-align: right;
+}
+
+.wrapper__content-2 {
+  background-image: url("../images/man7.jpg");
+  padding-top: 300px;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact-page {
+  background-color: #fff;
+}
+
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__wrapper-text {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #000;
+  font-weight: 300;
+}
+
+.contacts__wrapper-title {
+  margin-bottom: 20px;
+}
+
+.contacts__wrapper-descr {
+  display: block;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.map-wrapper {
+  background: url("../images/map.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 308px;
+  cursor: pointer;
+}
+
+.map-wrapper .map {
+  height: 308px;
+  overflow: hidden;
+}
+
+.map-wrapper.map-wrapper-ru {
+  background: url("../images/map.ru.png") no-repeat center;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.contacts__lang {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+
+.beauty-page,
+.barber-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg-girl7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.beauty-page__wrapper,
+.barber-page__wrapper {
+  text-align: center;
+  padding-top: 400px;
+}
+
+.beauty-page__title,
+.barber-page__title {
+  font-size: 104px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+
+.idea {
+  background-color: #000;
+  color: #fff;
+}
+
+.idea__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+}
+
+.idea-span {
+  margin-bottom: 25px;
+  color: #ed008d;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.idea__title {
+  margin-bottom: 25px;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.idea__descr {
+  margin-bottom: 60px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+  max-width: 1000px;
+}
+
+.idea__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.idea__content__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 50%;
+  margin-right: auto;
+}
+
+.idea__content-img img {
+  height: 600px;
+  width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.idea__content {
+  padding: 70px 60px 30px 60px;
+  min-height: 600px;
+  background-color: #fff;
+  width: 50%;
+  color: #000;
+}
+
+.idea__content-title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 45px;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.idea__content-text {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 300;
+}
+
+.hair,
+.services,
+.care {
+  width: 100%;
+  height: 100vh;
+}
+
+.hair__container,
+.services__container,
+.care__container {
+  padding-top: 300px;
+  text-align: center;
+}
+
+.hair__container p,
+.services__container p,
+.care__container p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.price-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+}
+
+.price-col {
+  width: 250px;
+}
+
+.price-col--1 {
+  width: 400px;
+}
+
+.price__list-item {
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.price__list-item-title {
+  margin-bottom: 50px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.price-btn__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 15px 0;
+  outline: none;
+  background-color: #ed008d;
+  width: 200px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.price-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.price-btn:hover::before {
+  left: 100%;
+}
+
+.row--bride {
+  height: auto;
+}
+
+.price-row {
+  height: auto;
+}
+
+.barber-page {
+  background-image: url("../images/man20.jpg");
+  background-position: center top;
+}
+
+.idea-span--barber {
+  color: #9a703e;
+}
+
+.price-row.row--barber {
+  height: auto;
+}
+
+@media screen and (max-width: 1170px) {
+  .wrapper__content-1 {
+    padding-top: 500px;
+    background-position: center left;
+  }
+  .wrapper__content-2 {
+    padding-top: 500px;
+    background-position: center right -100px;
+  }
+  .wrapper__content-box {
+    max-width: 500px;
+  }
+  .wrapper__content-box--right,
+  .wrapper__content-box--left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__title {
+    font-size: 50px;
+  }
+  .hero__btn {
+    background-color: #000;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .idea__content {
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper__content-2 {
+    background-position: center right -150px;
+  }
+  .wrapper__content-1 {
+    background-position: center left -50px;
+  }
+  .beauty-page__title,
+  .barber-page__title {
+    font-size: 80px;
+  }
+  .idea__content-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .idea__content__images {
+    max-width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .idea__content-img img {
+    width: 100%;
+  }
+  .idea__content {
+    padding: 50px 40px;
+    margin-bottom: 30px;
+    height: auto;
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .price-row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .price-col {
+    width: 150px;
+  }
+  .price-col--1 {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .hero {
+    height: auto;
+  }
+  .row.row-hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .col-50--lady,
+  .col-50--man {
+    width: 100vw;
+  }
+  .wrapper__content-1 {
+    background-position: center left;
+  }
+  .wrapper__content-2 {
+    background-position: center right -50px;
+  }
+  .price__list-item {
+    font-size: 18px;
+  }
+  .price-col {
+    width: 120px;
+  }
+  .price-col--1 {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .wrapper__content-2 {
+    background-position: center right -100px;
+  }
+  .menu-contacts__phone {
+    display: none;
+  }
+  .contacts__lang {
+    color: #fff;
+    padding: 0px;
+    border: none;
+    font-size: 13px;
+    margin-left: 0px;
+  }
+  .contacts__lang .menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-btn {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .menu__logo {
+    margin-right: auto;
+  }
+  .mobile__menu {
+    width: 100%;
+  }
+  .contacts__wrapper-title {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .contacts__wrapper-text {
+    margin-bottom: 5px;
+  }
+  .beauty-page__title,
+  .barber-page__title {
+    font-size: 60px;
+  }
+  .modal__dialog {
+    max-width: 34rem;
+  }
+  .form {
+    width: 400px;
+  }
+  .modal__title {
+    max-width: 400px;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  .modal__close {
+    right: 10px;
+  }
+  .success__modal {
+    max-width: 32rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper__content-2 {
+    background-position: center right -120px;
+  }
+  .price-col--1 {
+    width: 220px;
+  }
+  .price__list-item {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper__content-2 {
+    background-position: center right -150px;
+  }
+  .beauty-page__title,
+  .barber-page__title {
+    font-size: 50px;
+  }
+  .price-col {
+    width: 90px;
+  }
+  .price-col--1 {
+    width: 220px;
+  }
+  .modal__dialog {
+    max-width: 32rem;
+  }
+  .form {
+    width: 350px;
+  }
+  .modal__title {
+    max-width: 320px;
+  }
+  .modal__close {
+    right: 30px;
+  }
+  .success__modal {
+    max-width: 25rem;
+  }
+  .thanks__text {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper__content-2 {
+    background-position: center right -180px;
+  }
+  .wrapper__content-1 {
+    background-position: center left -50px;
+  }
+  .contacts__wrapper-title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .contacts__wrapper-descr {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .idea__title {
+    font-size: 35px;
+  }
+  .idea__descr {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .hair__container p,
+  .services__container p,
+  .care__container p {
+    font-size: 30px;
+  }
+  .price__list-item {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .price-col {
+    width: 70px;
+  }
+  .price-col--1 {
+    width: 150px;
+  }
+  .price-row {
+    margin-bottom: 20px;
+  }
+  .page {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper__content-2 {
+    background-position: center right -200px;
+  }
+  .wrapper__content-1 {
+    background-position: center left -80px;
+  }
+  .menu__logo a {
+    font-size: 36px;
+  }
+  .contact-page {
+    padding: 60px 0;
+  }
+  .contacts__wrapper-text {
+    max-width: 300px;
+    text-align: center;
+  }
+  .contacts__wrapper-descr {
+    margin-bottom: 5px;
+  }
+  .beauty-page__title,
+  .barber-page__title {
+    font-size: 40px;
+  }
+  .idea__content {
+    padding: 40px 20px;
+  }
+  .idea__content-title {
+    font-size: 25px;
+  }
+  .idea__title.idea__title--last {
+    font-size: 28px;
+  }
+  .modal__dialog {
+    max-width: 28rem;
+  }
+  .form {
+    width: 300px;
+  }
+  .modal__title {
+    max-width: 280px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .modal__close {
+    right: 35px;
+  }
+  .contacts__form-input {
+    height: 70px;
+    font-size: 16px;
+  }
+  .success__modal {
+    max-width: 20rem;
+    padding: 1.5rem 1.5rem 1.5rem;
+  }
+  .success__title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .menu__logo a {
+    font-size: 30px;
+  }
+  .wrapper__content-2 {
+    background-position: center right -220px;
+  }
+  .beauty-page__title,
+  .barber-page__title {
+    font-size: 35px;
+  }
+  .idea__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .wrapper__content-2 {
+    background-position: center right -240px;
+  }
+  .wrapper__content-1 {
+    background-position: center left -100px;
+  }
+  .map-wrapper {
+    height: 250px;
+  }
+  .map-wrapper .map {
+    height: 250px;
+  }
+  .price-col {
+    width: 65px;
+  }
+  .price-col--1 {
+    width: 150px;
+  }
+  .success__modal {
+    max-width: 18rem;
+  }
+}
+
+@media screen and (min-height: 1366px) {
+  .wrapper__content-2 {
+    background-position: center right -350px;
+  }
+  .wrapper__content-1,
+  .wrapper__content-2 {
+    padding-top: 750px;
+  }
+  .beauty-page__wrapper,
+  .barber-page__wrapper {
+    text-align: center;
+    padding-top: 600px;
+  }
+  .hair__container,
+  .services__container,
+  .care__container {
+    padding-top: 400px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .wrapper__content-2 {
+    background-position: center right -250px;
+  }
+  .wrapper__content-1 {
+    background-position: center left -150px;
+  }
+}
+
+@media screen and (max-height: 812px) {
+  .wrapper__content-1,
+  .wrapper__content-2 {
+    padding-top: 450px;
+  }
+  .hair__container,
+  .services__container,
+  .care__container {
+    padding-top: 200px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-height: 731px) {
+  .hair__container,
+  .services__container,
+  .care__container {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .wrapper__content-1,
+  .wrapper__content-2 {
+    padding-top: 300px;
+  }
+  .hair__container,
+  .services__container,
+  .care__container {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  .wrapper__content-1,
+  .wrapper__content-2 {
+    padding-top: 250px;
+  }
+  .hair__container,
+  .services__container,
+  .care__container {
+    padding-top: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
